@@ -95,57 +95,57 @@ if (userHasSubscribed) {return notifyMarketingTeam(user.email);} |
 
 ![](RackMultipart20211101-4-12lfht4_html_9ae7edcb5297a2c9.png)
 
-1. Now click on event buses. A panel will open where you can see all you event buses. There you can see there is a default event bus already present even you have never used the event bridge before. You cannot delete the default event bus.
+2. Now click on event buses. A panel will open where you can see all you event buses. There you can see there is a default event bus already present even you have never used the event bridge before. You cannot delete the default event bus.
 
 ![](RackMultipart20211101-4-12lfht4_html_35991f045df52727.png)
 
-1. Now Click on the rules. Event rules are defined per event bus. In this following case it&#39;s the default event bus.
+3. Now Click on the rules. Event rules are defined per event bus. In this following case it&#39;s the default event bus.
 
 ![](RackMultipart20211101-4-12lfht4_html_ce635365d199d730.png)
 
-1. Click on the Create event rule.
+4. Click on the Create event rule.
 
 ![](RackMultipart20211101-4-12lfht4_html_311ff51a51dd1c93.png)
 
-1. A panel will open you can enter your rule name for this case I am giving the name as myFirstrule.
+5. A panel will open you can enter your rule name for this case I am giving the name as myFirstrule.
 
 ![](RackMultipart20211101-4-12lfht4_html_c8dbb1034fcbc0fc.png)
 
-1. You can define pattern next. Either we can give it to run according to the time or provide according to cron job or we can use the pattern to connect to any service. For this case we will using pattern to connect to s3 service.
+6. You can define pattern next. Either we can give it to run according to the time or provide according to cron job or we can use the pattern to connect to any service. For this case we will using pattern to connect to s3 service.
 
 ![](RackMultipart20211101-4-12lfht4_html_1e33785467194514.png)
 
-1. Select the event pattern. Than pre-defined pattern by service. In service provide dropdown select AWS. From service name select S3 and event type as all types. On the right hand side you can see the event pattern is build by itself.
+7. Select the event pattern. Than pre-defined pattern by service. In service provide dropdown select AWS. From service name select S3 and event type as all types. On the right hand side you can see the event pattern is build by itself.
 
 ![](RackMultipart20211101-4-12lfht4_html_3ffe6a2f78585067.png)
 
-1. Scroll down to select target. In target select cloud watch group and will create new s3 log group with the name eventBridge-s3-log. Than click on create. Now the rule is created.
+8. Scroll down to select target. In target select cloud watch group and will create new s3 log group with the name eventBridge-s3-log. Than click on create. Now the rule is created.
 
 ![](RackMultipart20211101-4-12lfht4_html_1cd0484e0656fad4.png)
 
-1. If you go to the cloud watch log and see the log group is created but its empty.
+9. If you go to the cloud watch log and see the log group is created but its empty.
 
 ![](RackMultipart20211101-4-12lfht4_html_a9928e17bcdc5b66.png)
 
 ![](RackMultipart20211101-4-12lfht4_html_deeba5d3c897d21e.png)
 
-1. Now I will upload a file in S3 bucket that I already have.
+10. Now I will upload a file in S3 bucket that I already have.
 
 ![](RackMultipart20211101-4-12lfht4_html_5baf87ef63eb63ec.png)
 
-1. Now we go back to the cloud watch log we can see a new entry is created inside the log group that we have created.
+11. Now we go back to the cloud watch log we can see a new entry is created inside the log group that we have created.
 
 ![](RackMultipart20211101-4-12lfht4_html_e0f4f4c8afbcd33e.png)
 
-1. If you open the logs and cleck the log you can see the action that is performed.
+12. If you open the logs and cleck the log you can see the action that is performed.
 
 ![](RackMultipart20211101-4-12lfht4_html_43c6775ec147b1ab.png)
 
-1. If you check the event pattern and logs together you can get the same pattern in both place.
+13. If you check the event pattern and logs together you can get the same pattern in both place.
 
 ![](RackMultipart20211101-4-12lfht4_html_7a7cdf41457afa34.png)
 
-1. This is for the all events pattern you can also do the event patter for the object level action like put,delete etc event.
+14. This is for the all events pattern you can also do the event patter for the object level action like put,delete etc event.
 
 ![](RackMultipart20211101-4-12lfht4_html_e7ba03a0480aaa5f.png)
 
